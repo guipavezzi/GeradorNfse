@@ -1,0 +1,84 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Formulário para emissão de NFS-e</h1>
+    <form (ngSubmit)="gerarXML()">
+        <div class="row">
+            <div class="col">
+                <h3>Identificação do prestador de serviço</h3>
+                <div class="form-group">
+                    <label for="nomePrestador">Nome do Prestador de Serviço</label>
+                    <input type="text" class="form-control" name="nomePrestador" [(ngModel)]="nfse.nomePrestador" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpfPrestador">CNPJ do Prestador</label>
+                    <input type="text" class="form-control" name="cpfPrestador" [(ngModel)]="nfse.cnpjPrestador" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="IMPrestador">Inscrição Municipal do Prestador</label>
+                    <input type="text" class="form-control" name="IMPrestador" required [(ngModel)]="nfse.inscricaoPrestador">
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>Identificação do tomador de serviço</h3>
+                <div class="form-group">
+                    <label for="nomeTomador">Nome do Tomador de Serviço</label>
+                    <input type="text" class="form-control" name="nomeTomador" required [(ngModel)]="nfse.nomeTomador">
+                </div>
+
+                <div class="form-group">
+                    <label for="cpfTomador">CNPJ do Tomador</label>
+                    <input type="text" class="form-control" name="cpfTomador" required [(ngModel)]="nfse.cnpjTomador">
+                </div>
+
+                <div class="form-group">
+                    <label for="IMTomador">Inscrição Municipal do Tomador</label>
+                    <input type="text" class="form-control" name="IMTomador" [(ngModel)]="nfse.inscricaoTomador">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Dados da Nota Fiscal</h3>
+                <div class="form-group">
+                    <label for="numero">Número da nota fiscal</label>
+                    <input type="number" class="form-control" name="numero" required [(ngModel)]="nfse.numeroNota">
+                </div>
+
+                <div class="form-group">
+                    <label for="dataEmissao">Data de emissão</label>
+                    <input type="date" class="form-control" name="dataEmissao" required [(ngModel)]="nfse.dataEmissao">
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">Valor total</label>
+                    <input type="text" class="form-control" name="valor" required [(ngModel)]="nfse.valor">
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>Descrição</h3>
+                <div class="form-group">
+                    <label for="descricao">Breve descrição do serviço prestado</label>
+                    <textarea class="form-control" name="descricao" required [(ngModel)]="nfse.descricao"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Outras Informações</h3>
+                <div class="form-group">
+                    <label for="local">Local da Prestação de Serviço</label>
+                    <input type="text" class="form-control" name="local" required [(ngModel)]="nfse.localServico">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Gerar NFS-e</button>
+        </div>
+    </form>
+</div>
