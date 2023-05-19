@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { INfse } from '../model/Nfse';
+import { NfseService } from 'src/app/services/nfse.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-emissao-nfe',
@@ -7,14 +9,16 @@ import { INfse } from '../model/Nfse';
   styleUrls: ['./form-emissao-nfe.component.scss']
 })
 export class FormEmissaoNfeComponent {
+    ngOnInit(): void{
+    }
 
 
   nfse: INfse = {
     nomePrestador: '',
-    cnpjPrestador: 0,
+    cnpjPrestador: '',
     inscricaoPrestador: '',
     nomeTomador: '',
-    cnpjTomador: 0,
+    cnpjTomador: '',
     inscricaoTomador: '',
     numeroNota: 0,
     dataEmissao: undefined,
@@ -23,8 +27,18 @@ export class FormEmissaoNfeComponent {
     localServico: ''
   }
 
+
+
+  constructor(private service: NfseService){}
+
+  
+
   gerarXML(){
-    console.log(this.nfse)
+    this.service.returnXML(this.nfse).subscribe(
+      response =>{
+        console.log(response)
+      }
+    )
   }
 
 }

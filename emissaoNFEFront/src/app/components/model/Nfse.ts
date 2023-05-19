@@ -1,13 +1,13 @@
-export interface INfse{
+export interface INfse {
     nomePrestador: string
-    cnpjPrestador: number
+    cnpjPrestador: string
     inscricaoPrestador: string
     nomeTomador: string
-    cnpjTomador: number
+    cnpjTomador: string
     inscricaoTomador: string
     numeroNota: number
     dataEmissao?: Date
     valor: string
     descricao: string
     localServico: string
-}
+  }
