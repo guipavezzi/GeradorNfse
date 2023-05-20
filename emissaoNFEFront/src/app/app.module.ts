@@ -15,7 +15,8 @@ import { NfseService } from './services/nfse.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [NfseService],
   bootstrap: [AppComponent]

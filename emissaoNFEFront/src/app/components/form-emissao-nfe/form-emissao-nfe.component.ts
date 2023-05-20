@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { INfse } from '../model/Nfse';
+import { Component, ViewChild } from '@angular/core';
+import { INfse } from '../../model/Nfse';
 import { NfseService } from 'src/app/services/nfse.service';
-import { FormGroup } from '@angular/forms';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-form-emissao-nfe',
@@ -11,6 +12,9 @@ import { FormGroup } from '@angular/forms';
 export class FormEmissaoNfeComponent {
     ngOnInit(): void{
     }
+
+    xmlData: SafeHtml = '';
+    modalOpened: boolean = false;
 
 
   nfse: INfse = {
@@ -27,18 +31,17 @@ export class FormEmissaoNfeComponent {
     localServico: ''
   }
 
+  constructor(private service: NfseService, modalRef: BsModalRef, private sanitizer: DomSanitizer){
 
-
-  constructor(private service: NfseService){}
-
-  
-
-  gerarXML(){
-    this.service.returnXML(this.nfse).subscribe(
-      response =>{
-        console.log(response)
-      }
-    )
   }
+
+ gerarXML() {
+  this.service.returnXML(this.nfse).subscribe(
+    response => {
+      console.log(response)
+      this.xmlData = response
+    }
+  );
+}
 
 }

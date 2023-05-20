@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { INfse } from '../components/model/Nfse';
+import { INfse } from '../model/Nfse';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

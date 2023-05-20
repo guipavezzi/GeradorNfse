@@ -78,7 +78,16 @@
         </div>
 
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Gerar NFS-e</button>
+            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Gerar NFS-e</button>
         </div>
     </form>
 </div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <pre>{{ xmlData }}</pre>
+      </div>
+    </div>
+  </div>
