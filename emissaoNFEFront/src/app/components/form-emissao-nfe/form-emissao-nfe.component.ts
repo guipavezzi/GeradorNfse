@@ -31,7 +31,7 @@ export class FormEmissaoNfeComponent {
     localServico: ''
   }
 
-  constructor(private service: NfseService, modalRef: BsModalRef, private sanitizer: DomSanitizer){
+  constructor(private service: NfseService){
 
   }
 
