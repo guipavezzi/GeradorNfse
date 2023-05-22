@@ -1,6 +1,10 @@
 # GeradorNfse
 
-#### Este projeto foi desenvolvido como parte de um teste para uma empresa e tem como objetivo principal a geração de Nota Fiscal de Serviço Eletrônica (NFS-e). A finalidade é permitir a coleta de dados necessários para emitir uma NFS-e e validar esses dados de acordo com um esquema XML (XSD) fornecido pela Prefeitura de Hortolândia. O projeto consiste em uma aplicação front-end desenvolvida em Angular e uma API em C# responsável por gerar o XML com os dados digitados no formulário.
+#### Este projeto foi desenvolvido como parte de um desafio para uma empresa e tem como objetivo principal simular a geração de Nota Fiscal de Serviço Eletrônica (NFS-e). A finalidade é permitir a coleta de dados necessários para a emissão dessa nota fiscal e validar esses dados de acordo com um esquema XML (XSD) da cidade de Hortôlandia
+
+#### O Projeto Consiste em uma aplicação front-end desenvolvida em Angular para fornecimento dos dados do usuário e uma API em C# para geração do XML.
+
+#### É importante dizer que o projeto foi realizado para demonstrar a coleta de dados e geração do arquivo XML de acordo com o esquema específico não tem nenhuma validade legal ou fiscal.
 
 <br>
 
