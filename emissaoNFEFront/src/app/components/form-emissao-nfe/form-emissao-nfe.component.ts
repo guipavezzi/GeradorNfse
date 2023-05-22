@@ -31,6 +31,24 @@ export class FormEmissaoNfeComponent {
     localServico: ''
   }
 
+  limparCampo(){
+    this.nfse = {
+      nomePrestador: '',
+      cnpjPrestador: '',
+      inscricaoPrestador: '',
+      nomeTomador: '',
+      cnpjTomador: '',
+      inscricaoTomador: '',
+      numeroNota: 0,
+      dataEmissao: undefined,
+      valor: '',
+      descricao: '',
+      localServico: ''
+    }
+  }
+
+  
+
   constructor(private service: NfseService){
 
   }
@@ -42,6 +60,8 @@ export class FormEmissaoNfeComponent {
       this.xmlData = response
     }
   );
+  this.limparCampo()
+  this.xmlData = ''
 }
 
 }
